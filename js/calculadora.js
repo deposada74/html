@@ -76,13 +76,22 @@ pluz.addEventListener('click', function(){
     screen.value = ' '; 
 });
 
+minus.addEventListener('click', function(){
+    let screen = document.getElementById('screen');
+    let hide = document.getElementById('hide');
+    hide.value = screen.value;
+    screen.value = ' '; 
+});
+
 total.addEventListener('click', function(){
     let hide = document.getElementById('hide');
     let screen = document.getElementById('screen');
     
-    let suma = parseInt(hide.value) + parseInt(screen.value);
+    let pluz = parseInt(hide.value) + parseInt(screen.value);
+    let minus = parseInt(hide.value) - parseInt(screen.value);
     
-    screen.value = suma;
-    console.log(suma);
+    screen.value = pluz;
+    screen.value = minus;
 
 });
+
